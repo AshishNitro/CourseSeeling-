@@ -1,18 +1,19 @@
-const { Router } = require("express");
-const CourseRoutes = Router();
+const express = require("express");
+const { Router} = express;
+const courseRouter = Router();
 
-
-
-CourseRoutes.post("/purchased", function(req, res){
-    res.json({  message: "Your courses" 
-
-    })
-})
-CourseRoutes.get("/purchases", function(req, res){
-    res.json({  message: "courses your have "
+courseRouter.post("/purchase", function(req, res){
+    res.json({
+        message: "Your purchase"
     })
 })
 
-module.exports = {
-    UserRoutes: CourseRoutes
+courseRouter.get("/preview", function(req, res){
+    res.json({
+        message: "You course preview"
+    })
+})
+
+module.exports ={
+    courseRouter: courseRouter
 }
