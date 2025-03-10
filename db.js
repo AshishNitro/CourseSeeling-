@@ -1,7 +1,7 @@
 const { default: mongoose } = require("mongoose");
 const mangoose = require("mongoose");
 
-//mongoose.connect("mongodb+srv://ashishnitro5:aS1ntL7Bat3hmdh8@cluster0.ldjsp.mongodb.net/coursera-app")
+// mongoose linked have been broken as paid trail ended
 
 const Schema = mongoose.Schema;
 const onbjectId = mongoose.Types.ObjectId;
