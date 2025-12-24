@@ -1,7 +1,4 @@
-const { default: mongoose } = require("mongoose");
-const mangoose = require("mongoose");
-
-// mongoose linked have been broken as paid trail ended
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 const onbjectId = mongoose.Types.ObjectId;
@@ -15,6 +12,7 @@ const userSchema = new Schema({
     
     
     })
+    
     const  adminSchema = new Schema({
         email:{ type: String, unique: true},
         password: String,
@@ -45,11 +43,14 @@ const purchaseModel = mongoose.model("purchase", purchaseSchema);
 
 
 module.exports = {
+    // Schemas
     purchaseSchema,
     courseSchema,
     adminSchema,
-
     userSchema,
-
-
+    // Models
+    purchaseModel,
+    courseModel,
+    adminModel,
+    userModel,
 }
